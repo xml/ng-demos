@@ -1,0 +1,52 @@
+body {
+    padding-left: 40px;
+}
+
+.demo-template {
+    border: 1px solid black;
+    margin: 20px;
+    width: 400px;
+    padding: 20px;
+}
+nav a {
+    display: inline-block;
+}
+
+.guru-box {
+    background: rgba(81, 84, 255, 0.56);
+    border: 1px solid blue;
+    display: block;
+    border-radius: 4px;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.guru-pic, .guru-text {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.guru-pic {
+    width: 80px;
+    height: 80px;
+}
+
+.guru-text {
+    margin-left: 20px;
+}
+
+.guru-head, .guru-age, .guru-specialty {
+    margin: 0;    
+}
+
+.sort-label {
+    margin-bottom: 0;
+}
+
+.sort-buttons, button, .search-field {
+    display: block;
+    margin-bottom: 10px;
+}
+

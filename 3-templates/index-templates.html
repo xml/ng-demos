@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="templates-app.js"></script>
+
+    <link rel="stylesheet" href="../common/demo-styles.css">
+  </head>
+  <body ng-controller="mainController">
+    <!-- <button ng-click="meetupModel.templateState = !meetupModel.templateState">Toggle State</button> -->
+
+    <div ng-include="'../common/template-alpha.html'"></div>
+    <!-- <div ng-include="mainModel.template2_path"></div> -->
+
+<!-- Demo of conditional display -->
+    <!-- <div ng-show="meetupModel.templateState" id="alpha" ng-include="'../common/template-alpha.html'"></div>
+    <div ng-hide="meetupModel.templateState" id="beta" ng-include="'../common/template-beta.html'"></div> -->
+
+  </body>
+</html>

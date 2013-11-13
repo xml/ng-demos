@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="ngrepeat-app.js"></script>
+    <title>NG-Repeat</title>
+
+    <link rel="stylesheet" href="../common/demo-styles.css">
+  </head>
+  <body ng-controller="repeatController">
+  <h1>NG-Repeat: Everybody's Favorite Built-In Directive</h1>
+  <!-- <p class="sort-label">Sort repeat by:</p>
+  <form class="sort-buttons">
+    <label ng-repeat="option in config.options">
+      <input type="radio" ng-model="config.sorter" value={{option}}>{{option}}
+    </label>
+  </form> -->
+  <!-- <button ng-click="reverseMe()">Flip Sort</button> -->
+  <!-- <label class="search-field">Instant Search<input type="text" ng-model="config.filterString"></label> -->
+  <hr>
+
+  <div ng-repeat="guru in gurus" class="guru-box">
+  <!-- <div ng-repeat="guru in gurus | orderBy:config.sorter:config.reverse" class="guru-box"> -->
+  <!-- <div ng-repeat="guru in gurus | orderBy:config.sorter:config.reverse | filter:{name:config.filterString} " class="guru-box"> -->
+      <img src={{guru.img}} class="guru-pic">
+      <div class="guru-text">
+        <h3 class="guru-head">{{guru.name}}</h3>
+        <p class="guru-age">age: {{guru.age}}</p>
+        <p class="guru-specialty">specialty: {{guru.specialty}}</p>
+      </div>
+  </div >
+    
+
+  </body>
+</html>

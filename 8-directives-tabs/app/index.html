@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app"> 
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8"> -->
+    <title>ActiveTabs Demo</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap_borrowed.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+    <script src="scripts/angular.min.js"></script>
+
+  </head>
+  <body ng-app="TabsApp">
+
+
+    <!-- Add your site or application content here -->
+    <div class="container" ng-controller="NavCtrl">
+      <div class="header">
+        <!-- <h1>{{22+20}}</h1> -->
+        <h1><span class="skinny">XML's</span> <span class="knockout">Tabs Demo App</span></h1>
+        <div id="header_tabs">
+          <a href="#/home" class="nav_tab" active-tab="1">HOME</a>
+          <a href="#/finance" class="nav_tab" active-tab="1">Finance</a>
+          <a href="#/hr" class="nav_tab" active-tab="1">Human Resources</a>
+          <a href="#/quarterly" class="nav_tab" active-tab="1">Quarterly</a>
+        </div>
+      </div>
+
+      <div class="main-content" ng-view>
+      </div>
+
+      <div class="footer">
+        <p>&copy; Somebody</p>
+      </div>
+
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <script src="scripts/directives/activeTab.js"></script>
+
+</body>
+</html>

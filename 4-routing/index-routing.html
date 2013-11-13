@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="routing-app.js"></script>
+    <title>Routing</title>
+
+    <link rel="stylesheet" href="../common/demo-styles.css">
+  </head>
+  <body ng-controller="mainController">
+  <h1>Routing Demo</h1>
+  <nav>
+    <a href="#/alpha">Alpha</a> <a href="#/beta">Beta</a>
+  </nav>
+    <ng-view></ng-view>
+
+  </body>
+</html>

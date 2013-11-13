@@ -1,0 +1,597 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #64696F;
+    font-family: "gotham-book", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1024px;
+    min-height: 900px;
+    background: #eceff1;
+    position: relative; /* So that you can absolutely position anything inside of the .container, relative to it, rather than to Window. */
+    display: block;
+    margin: 0 auto;
+}
+.main-content {
+    padding: 20px 20px;
+}
+.header {
+    height: 144px;
+    width: 100%;
+    background: #022A3D;
+    position: relative;
+}
+.header h1 {
+    width: 175px;
+    margin: 0;
+    left: 220px;
+    top: 25px;
+    position: absolute;
+    color: #C5D851;
+    text-align: center;
+    font-family: 'gotham-bold';
+}
+.knockout {
+    display: block;
+    padding: 4px 6px 6px;
+    color: #022A3D;
+    font-size: 17px;
+    background: #C5D851;
+    text-transform: uppercase;
+    margin-top: -4px;
+}
+.skinny {
+    font-family: 'gotham-book';
+}
+.logo {
+    position: absolute;
+    width: 160px;
+    left: 20px;
+    top: 0px;
+}
+.footer {
+    background: #DDD;
+    border-top: 1px solid black;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.footer p {
+    font-size: 9px;
+    color: #BBB;
+    margin-left: 20px;
+}
+#side-nav {
+    position: absolute;
+    top: 180px;
+    right: 20px;
+}
+#header_tabs {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.nav_tab {
+    padding: 13px 20px;
+    border-radius: 4px 4px 0 0;
+}
+.nav_tab, .sl-nav, .unit-nav {
+    display: inline-block;
+    vertical-align: top;
+}
+.sl-nav a, .unit-nav a {
+    text-decoration: none;
+    color: #C5D851;
+    display: block;
+    font-family: gotham-book;
+}
+.home-icon-finance, .home-icon-hr, .home-icon-quarterly {
+    padding-left: 50px !important;
+}
+.home-icon-finance:after {
+    content: url('../images/icon-finance-22.png');
+    position: absolute;
+    top: 7px;
+    left: 16px;
+}
+.home-icon-hr:after {
+    content: url('../images/icon-hr-22.png');
+    position: absolute;
+    top: 7px;
+    left: 11px;
+}
+.home-icon-quarterly:after {
+    content: url('../images/icon-quarterly-22.png');
+    position: absolute;
+    top: 7px;
+    left: 14px;
+}
+.nav_tab {
+    text-decoration: none;
+    color: #C5D851;
+    font-family: gotham-book;
+}
+.nav_tab.active,
+.nav_tab:hover {
+    background: #eceff1;
+    color: #022A3D;
+}
+.sl-panel {
+    border-radius: 3px;
+    overflow: hidden;
+}
+.sl-panel, .unit-panel, .agency-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 260px;
+}
+.unit-panel {
+    display: none;
+}
+.unit-panel.active {
+    display: block;
+}
+.unit-panel, 
+.sl-nav > a {
+    border-bottom: 1px solid #0A2B40; 
+}
+.sl-nav, .unit-nav {
+    width: 100%;
+    font-family: 'gotham-medium';
+    position: relative;
+}
+.sl-nav > a {
+    background: #063146;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.sl-nav > a.active {
+    background: #00527F;
+    color: #FFF;
+}
+
+.unit-nav > a {
+    background: #00416A;
+    padding: 7px 0px 7px 40px;
+    font-size: 14px;
+    border-top: 1px solid #003C62; 
+}
+.unit-nav > a.active {
+    color: #FFF;
+}
+h2 {
+    margin-left: 20px;
+    color: #00527F;
+    width: 710px;
+    margin-bottom: 5px;
+}
+.panel {
+    width: 710px;
+    min-height: 150px;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+.panel-head {
+    display: block;
+    width: 100%;
+    background: #063146;
+    border-radius: 3px;
+    padding: 7px 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #FFF;
+    margin: 0 0 6px;
+    position: relative;
+}
+.panel-period {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #C7C7D1;
+    font-size: 11px;
+    text-transform: lowercase;
+    margin: 0;
+    padding: 0;
+}
+.panel-body {
+    width: 100%;
+    font-size: 0;
+    position: relative;
+}
+.panel-body div {
+    display: inline-block;
+}
+.stat-box {
+    position: relative;
+    background: #FFF;
+    border-radius: 3px;
+    margin: 0;
+    height: 160px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top; /* because default is 'baseline' for inline-block items */
+}
+.blank-body {
+    background: #FFF;
+    border-radius: 3px;
+    margin: 0;
+    height: 160px;
+    vertical-align: top; /* because default is 'baseline' for inline-block items */
+}
+.body-wrap {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+.chart-only-box {
+    height: 120px;
+}
+.not-last {
+    margin: 0 7px 0 0; /* make some space between charts. Would IE8 support a last-child selector? */
+}
+.push5 {
+    margin-left: 2%;
+}
+.push5pct {
+    margin-left: 5%;
+}
+.single-stat {
+    width: 150px;
+    padding: 5px;
+    background: #147EAE;
+    color: #FFF;
+    text-align: center;
+    font-size: 13px;
+}
+.single-stat-title {
+    margin: 25px 0 0;
+    font-family: gotham-medium;
+}
+.single-stat-figure {
+    font-family: gotham-bold;
+    font-size: 56px;
+    margin: 0;
+}
+.on-white {
+    color: #063146;
+}
+.single-stat-figure sup {
+    font-size: 33px;
+}
+.double-stat-figure {
+    font-size: 42px;
+    padding: 0 4px;
+}
+.double-plus-stat-figure {
+    font-size: 55px;
+    padding: 0 10px;
+}
+
+.days-stat {
+    color: #022A3D;
+    font-family: gotham-medium;
+}
+.double-stat-label, .stat-box-label {
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #DDD;
+}
+.stat-box-label {
+    color: #444;
+}
+.double-stat-table {
+    margin: 10px auto 0;
+    text-align: center;
+}
+.double-stat-table td {
+    padding: 0;
+}
+.border-carrier {
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+#transition {
+    width: 505px;
+}
+#inventory {
+    width: 200px;
+}
+#ny-performs-quarterly {
+    width: 224px;
+}
+#ny-performs-quarterly hr {
+    border-color: rgba(22, 113, 165, 0.5);
+}
+.quarterly-para {
+    display: inline-block;
+    vertical-align: top;
+}
+.single-stat-title.quarterly-para {
+    text-align: left;
+    font-family: gotham-book;
+    line-height: 1.5;
+    margin-top: 15px;
+    font-size: 11px;
+}
+.quarterly-agency-table {
+    display: inline-table;
+    margin: 0;
+}
+.quarterly-agency-table .double-stat-figure {
+    font-size: 40px;
+    padding: 0 6px;
+}
+.nyperforms-stats {
+    width: 100%;
+    padding: 11px 16px 0;
+    background: #147EAE;
+    color: #FFF;
+    font-size: 12px;
+    text-align: left;
+}
+#inquiries-quarterly {
+    width: 475px;
+    margin-left: 5px;
+}
+#inquiries-quarterly .stat-box {
+    width: 32%;
+}
+#invoices-stat {
+    font-size: 50px;
+    text-align: center;
+    width: 95px;
+}
+.panel-row {
+    width: 710px;
+}
+.inline-panel {
+    display: inline-block;
+    vertical-align: top;
+}
+.stat-box-title {
+    font-family: gotham-book;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #939B9B;
+    margin: 15px auto 10px;
+}
+.stat-box-title.short {
+    margin-top: 8px;
+    font-size: 11px;
+}
+#inventory .stat-box {
+    width: 100%;
+}
+.one-fifth {
+    width: 19%; /*130px;*/
+}
+.ap-avg {
+    margin-left: 3px;
+}
+.ap-avg .double-stat-label {
+    color: #939B9B;
+}
+.double-stat-bg {
+    padding: 15px 20px;
+}
+.quarter-vol {
+    margin: 13px 0 0 20px;
+    border-left: 1px solid rgba(147, 155, 155, 0.47);
+    padding: 0 0 30px 20px;
+}
+.proc-days {
+    margin-left: 45px;
+}
+.proc-days, .quarter-vol, .ap-avg {
+    padding-top: 15px;
+}
+.agency-menu {
+    display: block;
+    background: #FFF;
+    height: 91px;
+}
+.agency-head {
+    display: block;
+    position: relative;
+    background: #022A3D;
+    width: 100%;
+    height: 34px;
+    padding: 10px 10px 6px;
+    color: #ddd;
+    font-size: 12px;
+    font-family: gotham-medium;
+    border-radius: 2px 2px 0 0;
+}
+.agency-reveal {
+    width: 34px;
+    height: 28px;
+    background: #C5D851;
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    padding: 6px 0 0 5px;
+}
+.agency-reveal:after {
+    content: url('../images/reveal-arrow-24.png');
+    position: absolute;
+    top: 6px;
+    right: 5px;
+}
+.agency-input {
+    width: 96%;
+    border: 1px solid #EEE;
+    margin: 6px 5px 6px;
+    font-size: 21px;
+    font-family: gotham-book;
+    color: #939B9B;
+    padding: 10px 0;
+    text-overflow: ellipsis;
+    padding-left: 4px;
+}
+.modal-list {
+    padding: 13px 20px;
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid #BBB;
+}
+.modal-list-item {
+    display: block;
+}
+.show-detail:after {
+    content: url('../images/expand_arrow.png');
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.chart-hotspot {
+    width: 80px;
+    margin-right: 25px;
+    height: 120px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.chart-hotspot-row {
+    font-size: 0;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 102%;
+    height: 120px;
+    padding: 0 0 0 22px;
+    text-align: left;
+    z-index: 99;
+}
+.separate-hotspot-row {
+    font-size: 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 102%;
+    height: 150px;
+    padding: 0;
+    text-align: left;
+}
+.separate-hotspot {
+    width: 136px;
+    margin-right: 7px;
+    height: 150px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.chart-hotspot:hover, .separate-hotspot:hover {
+    background: rgb(85,196,51);
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+.soon {
+    background: url('../images/coming_soon.png');
+    margin: 20px 70px;
+    background-repeat: no-repeat;
+    height: 220px;
+    width: 547px;
+}
+#loading.loader-hidden {
+    display: none;
+}
+.loader-logo {
+    width: 180px;
+    margin: 20px auto 10px;
+    display: block;
+}
+.loader-gif {
+    margin: 0 auto;
+    display: block;
+}
+.loader-body {
+    text-align: center;
+}
+.loader-text {
+    width: 500px;
+    margin: 40px auto 40px;
+}
+
+.ng-hide {
+    display: none !important;
+}
+.quality-link {
+    color: #81A149; /*rgba(197, 216, 81, 0.7);*/
+    position: absolute;
+    top: 0px;
+    left: 865px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.freshness-partial {
+    overflow: scroll;
+}
+.freshness-partial h4 {
+    margin:20px 0 10px 30px;
+    padding: 0;
+}
+.freshness-list, .error-list {
+    padding: 0px 20px;
+    margin: 0 30px 20px;
+    min-height: 200px;
+    border: 1px solid #BBB;
+    background: #EEE;
+}
+.freshness-list-item {
+    font-size: 14px;
+}
+.freshness-list {
+    padding: 20px;
+}
+.freshness-list-item td {
+    padding-bottom: 3px;
+}
+.freshness-list table td:first-child, .error-list table td:first-child {
+    font-family: gotham-medium;
+    text-align: right;
+    padding-right: 15px;
+}
+.error-list-item {
+    font-size: 12px;
+}
+.error-list {
+    background: none;
+    border: none;
+}
+.chart-periods button {
+    background: #022A3D;
+    color: #C5D851;
+    text-shadow: none;
+    font-family: gotham-medium;
+}
+.chart-periods button.active, .chart-periods button:hover {
+    color: #FFF;
+    background: #00527F;
+    text-shadow: none;
+}
+
+
+/*http://paularmstrongdesigns.com/weblog/stop-superscripts-from-breaking-line-heights-once-and-for-all/*/
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub { 
+    top: 0.4em; 
+}
+/* end styles for fixing super/subscript */
