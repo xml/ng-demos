@@ -6,7 +6,9 @@
   </head>
   <body>
     <div>
-      <!-- {{22/7}} -->
+    <!-- Use simple Angular expressions like this one just to make sure your app has 
+    bootstrapped properly. Then remove them. -->
+      {{22/7 | number:2}}
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <h1>Hello, {{ yourName }}!</h1>
     </div>
