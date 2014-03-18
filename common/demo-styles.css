@@ -1,5 +1,25 @@
 body {
+    margin: 0;
+    background: #EEE;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.panel {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.container {
+    background: #FFF;
     padding-left: 40px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    border-width: 1px; 
+    border-style: none solid solid; 
+    border-color: #A4A4A4;
 }
 
 .demo-template {

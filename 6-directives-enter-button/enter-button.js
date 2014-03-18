@@ -34,7 +34,7 @@ angular.module('components', [])
 			// restrict: 'EACM',
 
 			// template: '<button class="btn" target-class="btn-danger">Template Button!</button>',
-			// templateUrl: 'assets/partials/button.html',
+			// templateUrl: 'button.html',
 
 			// replace: true,
 
