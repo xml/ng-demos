@@ -119,11 +119,15 @@ body {
     color: #C5D851;
     font-family: gotham-book;
 }
-.nav_tab.active,
-.nav_tab:hover {
+.nav_tab.active {
     background: #eceff1;
     color: #022A3D;
 }
+.nav_tab:hover {
+    background: #C5D851;
+    color: #022A3D;
+}
+
 .sl-panel {
     border-radius: 3px;
     overflow: hidden;
