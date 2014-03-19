@@ -1,0 +1,123 @@
+html {
+  background: #4D4B4B;
+}
+body {
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+/**********   PAGE-TOP-NAV   ***********/
+#app-head {
+  height: 66px;
+  width: 100%;
+  position: relative;
+  background: #0A2033;
+  font-size: 0;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+}
+  #app-head nav {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #app-head a,
+  .nav-text {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  .top-nav-menu {
+    width: 957px;
+    height: 66px;
+    position: absolute;
+    top: 0px;
+    left: 67px;
+    background: #E6E7E8;
+  }
+
+  .head-subnav {
+    width: 600px;
+    height: 66px;
+    position: relative;
+  }
+  .subnav-text,
+  .head-icon-button {
+    color: #8E8E8E;
+  }
+  .home-welcome-text {
+    /* Use auto vertical centering */
+    height: 16px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .nav-text {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Abadi MT Condensed Light";
+  }
+    .nav-text.active {
+      font-weight: bold;
+      font-family: "Abadi MT Condensed Extra Bold";
+    }
+  .nav-text.top-nav-item {
+    width: 300px;
+    color: #081928;
+    margin-top: 25px;
+  }
+    
+  .subnav-text {
+    width: 148px;
+  }
+    .subnav-text.active,
+    .top-nav-status-text {
+      color: #FFF;
+    }
+  .top-nav-status-text {
+    width: 152px;
+  }
+  .subnav-text,
+  .top-nav-status-text {
+    height: 66px;
+    padding: 25px;
+  }
+  .top-nav-status-text, 
+  .head-icon-button {
+    background: #092844;
+  }
+  .head-icon-button {
+    width: 66px;
+    height: 66px;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 17px;
+    margin-right: 1px;
+    cursor: pointer;
+  }
+  .head-right-buttons {
+    float: right;
+  }
+  .vert-center {
+    height: 40px;
+    width: 100px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+  }
+  /**********   PAGE-TOP-NAV ENDS  ***********/
+

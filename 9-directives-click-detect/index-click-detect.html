@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="ClickDetectApp" any-click-detect>
+
+<head>
+    <meta charset="utf-8">
+    <title>Click-Detect Demo</title>
+    <link rel="stylesheet" href="../common/normalize.css" />
+    <link rel="stylesheet" href="../common/font-awesome.css" />
+    <link rel="stylesheet" href="styles-body-click.css">
+    <script src="../common/angular.min.js"></script>
+    <script src="../common/angular-route.min.js"></script>
+    <script src="app-click-detect.js"></script>
+    <script src="directive-click-detect.js"></script>
+    <script src="directive-activetab.js"></script>
+
+</head>
+
+<body>
+
+    <nav id="app-head" ng-controller="NavCtrl">
+        <a class="head-icon-button" ng-click="toggleTopNav();"><i class="fa fa-bars"></i></a>
+        <a class="nav-text top-nav-status-text active" href="">{{currentNav.statusText}}</a>
+        <nav class="head-right-buttons">
+            <a class="head-icon-button" href=""><i class="fa fa-search"></i></a>
+            <a class="head-icon-button" href=""><i class="fa fa-pencil"></i></a>
+            <a class="head-icon-button" href=""><i class="fa fa-cog"></i></a>
+        </nav>
+        <!-- These next nav items will populate contextually... -->
+        <nav class="head-subnav" ng-include="currentNav.subnavURL">
+
+        </nav>
+
+        <nav class="top-nav-menu" ng-show="topNavState" find-active-tab=1 >
+            <a class="nav-text top-nav-item" href="#/home">Home</a>
+            <a class="nav-text top-nav-item" href="#/content">Content</a>
+            <a class="nav-text top-nav-item" href="#/more">More</a>
+        </nav>
+
+    </nav>
+
+    <div class="container" ng-view=""></div>
+
+</body>
+
+</html>
