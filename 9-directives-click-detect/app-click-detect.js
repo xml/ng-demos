@@ -59,7 +59,7 @@ angular.module('ClickDetectApp')
     $scope.toggleTopNav = function() {
         // If the nav is already hidden, show it, BUT.. also setup the handler for clicks elsewhere
         if ($scope.topNavState === false) {
-            $rootScope.$broadcast('requestClickDetect');
+            // $rootScope.$broadcast('requestClickDetect');
             $scope.topNavState = true;
         } else {
             // and if it's already showing, hide it
@@ -67,13 +67,13 @@ angular.module('ClickDetectApp')
         }
     }
 
-    function handleBodyClick() {
-        // this is our handler function, for when we learn there's been a click somewhere else. 
-        $timeout(function() {
-            $scope.toggleTopNav();
-        }, 0)
-    }
-    $scope.$on('bodyClicked', handleBodyClick);
+    // function handleBodyClick() {
+    //     // this is our handler function, for when we learn there's been a click somewhere else. 
+    //     $timeout(function() {
+    //         $scope.toggleTopNav();
+    //     }, 0)
+    // }
+    // $scope.$on('bodyClicked', handleBodyClick);
 
   });
 

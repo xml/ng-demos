@@ -12,4 +12,6 @@ They should be fully functional as-is, without any external dependencies. Becaus
 5. Navigate the tree and open up the file in each demo folder that is some variation on `index.html`. 
 
 
-They are only semi-documented, with some cryptic notes for my own use when presenting. Some day, I hope to provide a written guide here for each demo.
+In general, the demos are in a non-functioning state. However, in most cases, the code to get them functioning (possibly in many ways) already exists here and just needs to be un-commented.
+
+They are only semi-documented, with some cryptic notes for my own use when presenting. Some day, I hope to provide a written guide here for each demo. Until then, experiment and take advantage of the fact that Source Control means never having to say you're sorry: if you break something, just nuke the repo, re-clone, and start over.
