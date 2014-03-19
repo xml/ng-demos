@@ -25,6 +25,8 @@ angular.module('ClickDetectApp', ['ngRoute'])
 
 angular.module('ClickDetectApp')
   .controller('NavCtrl', function ($scope, $rootScope, $location, $timeout) {
+    
+    /*  STUFF NOT DIRECTLY RELATED TO DEMO  */
     var navPaths = {
             home: {
                 subnavURL: "views/nav-home.html",
@@ -51,20 +53,22 @@ angular.module('ClickDetectApp')
     $scope.$on('$locationChangeSuccess', updateNav);
 
 
-
-    $scope.topNavState = false;
+    /*  STUFF DIRECTLY RELATED TO DEMO BEGINS  */
+    
+    $scope.topNavState = false; // data-driven UI!
     $scope.toggleTopNav = function() {
+        // If the nav is already hidden, show it, BUT.. also setup the handler for clicks elsewhere
         if ($scope.topNavState === false) {
             $rootScope.$broadcast('requestClickDetect');
-            $scope.topNavState = !$scope.topNavState;
+            $scope.topNavState = true;
         } else {
-            $scope.topNavState = !$scope.topNavState;
+            // and if it's already showing, hide it
+            $scope.topNavState = false;
         }
     }
-    function hideTopNav() {
-        $scope.topNavState = false;
-    }
+
     function handleBodyClick() {
+        // this is our handler function, for when we learn there's been a click somewhere else. 
         $timeout(function() {
             $scope.toggleTopNav();
         }, 0)
