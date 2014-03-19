@@ -41,7 +41,7 @@ angular.module('time', [])
 					updateLater(); // kick off the UI update process.
 
 					/*  VERSION 1  */
-					timeFormat = scope.format2;
+					timeFormat = scope.format1;
 
 					/*  VERSION 2  */
 					// scope.$watch("format1", function(value){

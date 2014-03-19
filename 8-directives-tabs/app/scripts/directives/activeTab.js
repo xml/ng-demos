@@ -75,10 +75,10 @@ angular.module('TabsApp')
 
 
 /*
-1. Behavior without, then with 'detect' directive
+1. Behavior without, then with directive file enabled, defaults to 'detect' version
 2. Note declarative params, just like clock.
-3. Try /anything/level2
-4. Demo 'find' version
+3. Demo /anything/level2
+4. Demo 'find' version instead of 'detect'
 
 
 */
