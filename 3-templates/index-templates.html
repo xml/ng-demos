@@ -11,9 +11,12 @@
     <!-- <button ng-click="meetupModel.templateState = !meetupModel.templateState">Toggle State</button> -->
 
     <div ng-include="'../common/template-alpha.html'"></div>
+    <!-- STEP 1: uncomment the ng-include below, and note that the path is coming from a service -->
     <!-- <div ng-include="mainModel.template2_path"></div> -->
 
-<!-- Demo of conditional display -->
+<!-- STEP 2: Demo of conditional display -->
+<!-- comment out the templates above, and uncomment these two below. -->
+<!-- also: uncomment the button, above -->
     <!-- <div ng-show="meetupModel.templateState" id="alpha" ng-include="'../common/template-alpha.html'"></div>
     <div ng-hide="meetupModel.templateState" id="beta" ng-include="'../common/template-beta.html'"></div> -->
 

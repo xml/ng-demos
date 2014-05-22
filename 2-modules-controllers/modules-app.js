@@ -17,8 +17,10 @@ angular.module('myApp', []);
 // NOTE THAT THE APP STILL ISN'T WORKING. myController is still `undefined`, and interface is broken. 
 // So, INCLUDE THE MYRESOURCES MODULE AS A DEPENDENCY OF THE MAIN APP MODULE, above.
 
-
 // STEP 3: 
+// NOTE NG-CLICK ON THE TEMPLATE...
+
+// STEP 4: 
 // ALTERNATE FORM OF CONTROLLER DEFINITION 
 // For Maintainability/readability, Don't Do This. But Understand If You See It.
 // Enable this code, and disable the modular code above, and note equivalent function. 
@@ -34,3 +36,4 @@ angular.module('myApp', []);
 //     }
 
 // }
+

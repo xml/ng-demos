@@ -3,13 +3,14 @@ This is necessary for the first few demos. But in the routing demo, where
 controllers are provided by the routing, you can remove this ng-controller from the template.
 If you don't, you wind up with two nested versions of the same controller. 
 Try it and see the results in the Angular Batarang. -->
+
 <div ng-controller="templateController" class="demo-template">  
   <h2> Template Alpha</h2>
     <input type="text" ng-model="meetupModel.yourName" placeholder="Enter a name here">
     <h1>Hello, {{ meetupModel.yourName }}!</h1>
     <hr>
 
-    <p>Angular Meetups rock, {{meetupModel.organizer}}!!!</p>
+    <p>Angular Training rocks, {{meetupModel.organizer}}!!!</p>
     <hr>
     <p>{{meetupModel.presenter}} *really* likes Angular. </p>
     <button ng-click="demo()">Say Hi.</button>

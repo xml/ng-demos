@@ -1,5 +1,5 @@
 /* You'll see far too many versions of service creation in the Angular docs and 
-    in other examples. To be clear, here are all of them. */ 
+    in other examples. To be clear, here are all/most of them. */ 
 
 /* VERSION 1 OF HOW TO REGISTER A SERVICE (most concise):
  just call the .service method directly on the module, after creation time. 
@@ -40,7 +40,7 @@ angular.module('myResources', [])
     .controller('templateController', function($scope){
         window.bob = $scope.meetupModel = {
             presenter: "Christian",
-            organizer: "Leigh",
+            organizer: "Tom",
             yourName: '',
             templateState: true
         }
@@ -52,6 +52,7 @@ angular.module('myResources', [])
 angular.module('myResources')
     .controller('mainController', function($scope, fileSystem){
         $scope.mainModel = fileSystem;
+
     });
 
 
