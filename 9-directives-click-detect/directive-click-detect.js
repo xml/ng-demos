@@ -1,3 +1,5 @@
+/*  This directive is used to monitor activity across the application, and send information to specific requesting contexts. */
+
 
 angular.module('ClickDetectApp')
   .directive('anyClickDetect', function ($rootScope, $timeout) {
@@ -21,6 +23,8 @@ angular.module('ClickDetectApp')
                     if (target === "head-icon-button" || target === "fa fa-bars") {
                         return false;
                     } else {
+                        
+                        // KEY LINE #2: WHEN DIRECTIVE DETECTS A CLICK, IT SENDS A MESSAGE BACK TO THE REQUESTOR, CONFIRMING RECEIPT
                         $rootScope.$broadcast('bodyClicked');
                     }
                 });  
