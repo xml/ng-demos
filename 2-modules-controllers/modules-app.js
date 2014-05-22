@@ -1,27 +1,36 @@
 angular.module('myApp', []);
 
+// STEP 1: 
+// UN-COMMENT THIS SECTION TO SEE HOW BASIC MODULE & CONTROLLER INSTANTIATION WORKS. 
 // angular.module('myResources', []).controller('myController', function($scope){
 //     $scope.meetupModel = {
 //         presenter: "Christian",
-//         organizer: "Leigh"
+//         organizer: "Tom",
+//         yourName: ""
 //     }
 //     $scope.demo= function() {
-//         alert("Hello, " + $scope.meetupModel.organizer);
+//         alert("Hello, " + $scope.meetupModel.yourName);
 //     }
-
 // });
 
+// STEP 2: 
+// NOTE THAT THE APP STILL ISN'T WORKING. myController is still `undefined`, and interface is broken. 
+// So, INCLUDE THE MYRESOURCES MODULE AS A DEPENDENCY OF THE MAIN APP MODULE, above.
 
-/* ALTERNATE FORM OF CONTROLLER DEFINITION */
-/* DON'T DO THIS. BUT UNDERSTAND IF YOU SEE IT. */
+
+// STEP 3: 
+// ALTERNATE FORM OF CONTROLLER DEFINITION 
+// For Maintainability/readability, Don't Do This. But Understand If You See It.
+// Enable this code, and disable the modular code above, and note equivalent function. 
 
 // function myController($scope){
 //     $scope.meetupModel = {
 //         presenter: "Christian",
-//         organizer: "Leigh"
+//         organizer: "Tom",
+//         yourName: ""
 //     }
 //     $scope.demo= function() {
-//         alert("Hello, " + $scope.meetupModel.presenter);
+//         alert("Hello, " + $scope.meetupModel.yourName);
 //     }
 
 // }
